@@ -2,8 +2,7 @@ resource "aws_eks_node_group" "this" {
   cluster_name    = local.cluster_name
   node_group_name = local.node_group_name
   node_role_arn   = local.role_arn
-
-  subnet_ids = local.subnet_ids
+  subnet_ids      = local.subnet_ids
 
   scaling_config {
     desired_size = var.src.scaling_config.desired_size
@@ -12,8 +11,8 @@ resource "aws_eks_node_group" "this" {
   }
 
   ami_type       = var.src.ami_type
+  capacity_type  = var.src.capacity_type
   instance_types = toset(var.src.instance_types)
-  capacity_type  = "SPOT"
 
   taint {
     key    = "reserved-pool"

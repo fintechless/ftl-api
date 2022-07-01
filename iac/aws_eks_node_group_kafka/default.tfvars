@@ -4,8 +4,9 @@ src = {
   config_key_iam = "terraform/fintechless/ftl-api/aws_iam_eks_node_group_kafka/terraform.tfstate"
 
   node_group_name = "ftl-api-kafka-node-group"
-  instance_types  = ["t3.small"]
   ami_type        = "AL2_x86_64"
+  capacity_type   = "SPOT"
+  instance_types  = ["t3.small"]
 
   scaling_config = {
     desired_size = 3
