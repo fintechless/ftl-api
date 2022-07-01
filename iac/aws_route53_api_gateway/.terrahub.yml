@@ -1,0 +1,4 @@
+component:
+  name: aws_route53_api_gateway
+  dependsOn:
+    - aws_api_gateway_domain_name

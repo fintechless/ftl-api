@@ -1,0 +1,7 @@
+component:
+  name: aws_k8s_ingress_mgr_config
+  dependsOn:
+    - aws_eks_cluster
+    - aws_k8s_service_mgr_config
+    - aws_k8s_elb_controller
+    - aws_api_gateway_vpc_link_mgr

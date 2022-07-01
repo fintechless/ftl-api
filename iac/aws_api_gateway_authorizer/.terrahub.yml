@@ -1,0 +1,5 @@
+component:
+  name: aws_api_gateway_authorizer
+  dependsOn:
+    - aws_cognito_user_pool
+    - aws_api_gateway_rest_api

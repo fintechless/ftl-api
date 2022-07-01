@@ -1,0 +1,7 @@
+component:
+  name: aws_k8s_ingress_msa_mapping
+  dependsOn:
+    - aws_eks_cluster
+    - aws_k8s_service_msa_mapping
+    - aws_k8s_elb_controller
+    - aws_api_gateway_vpc_link_msa

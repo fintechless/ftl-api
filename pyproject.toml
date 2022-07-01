@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "ftl-api"
+version = "0.0.1"
+description = "Serverless Platform for Financial Institutions and Fintechs"
+authors = ["Fintechless.com"]
+license = "Mozilla Public License Version 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.1.1"
+prometheus-flask-exporter = "^0.20.0"
+python-dotenv = "^0.20.0"
+Flask-Cors = "^3.0.10"
+bs4 = "^0.0.1"
+wget = "^3.2"
+ftl-python-lib = {path = "../ftl-python-lib"}
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+mock = "^4.0.3"
+pyenchant = "^3.2.2"
+pylint = "^2.13.5"
+pytest = "^7.1.1"
+
+[tool.poetry.scripts]
+tests = "poetry.main:run_tests"
+lint = "poetry.main:run_lint"
+format = "poetry.main:run_format"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+force_single_line="True"
+line_length=180

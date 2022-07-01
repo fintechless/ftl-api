@@ -1,0 +1,5 @@
+component:
+  name: aws_k8s_service_mgr_transaction
+  dependsOn:
+    - aws_eks_cluster
+    - aws_k8s_deployment_mgr_transaction

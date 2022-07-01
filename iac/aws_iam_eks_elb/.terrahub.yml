@@ -1,0 +1,4 @@
+component:
+  name: aws_iam_eks_elb
+  dependsOn:
+    - aws_eks_cluster

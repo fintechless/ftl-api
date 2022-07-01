@@ -1,0 +1,6 @@
+component:
+  name: aws_cognito_identity_pool
+  dependsOn:
+    - aws_cognito_user_pool
+    - aws_cognito_user_pool_client
+    - aws_iam_identity_pool

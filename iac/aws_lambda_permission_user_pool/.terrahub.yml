@@ -1,0 +1,5 @@
+component:
+  name: aws_lambda_permission_user_pool
+  dependsOn:
+    - aws_cognito_user_pool
+    - aws_lambda_user_pool

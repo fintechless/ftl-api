@@ -1,0 +1,64 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-exporter
+  namespace: confluent
+  labels:
+    app.kubernetes.io/name: kafka-exporter
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: kafka-exporter
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: kafka-exporter
+    spec:
+      containers:
+        - name: kafka-exporter
+          image: "danielqsj/kafka-exporter:latest"
+          args:
+            - --kafka.server=kafka.confluent.svc.cluster.local:9071
+            - --zookeeper.server=zookeeper.confluent.svc.cluster.local:2181
+          ports:
+            - name: "kexporter"
+              containerPort: 9308
+              protocol: TCP
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: eks.amazonaws.com/nodegroup
+                    operator: In
+                    values:
+                      - ${EKS_NODE_GROUP}
+      tolerations:
+        - key: reserved-pool
+          value: "true"
+          operator: Equal
+          effect: NoSchedule
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-exporter
+  namespace: confluent
+  labels:
+    app.kubernetes.io/name: kafka-exporter
+spec:
+  type: ClusterIP
+  ports:
+    - port: 9308
+      name: "kexporter"
+      targetPort: 9308
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: kafka-exporter
+status:
+  loadBalancer: {}

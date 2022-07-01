@@ -1,0 +1,4 @@
+component:
+  name: aws_cognito_user_pool
+  dependsOn:
+    - aws_lambda_user_pool

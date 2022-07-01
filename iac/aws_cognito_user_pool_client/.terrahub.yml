@@ -1,0 +1,6 @@
+component:
+  name: aws_cognito_user_pool_client
+  dependsOn:
+    - aws_cognito_user_pool
+    - aws_cognito_resource_server
+    - aws_cognito_user_group

@@ -1,0 +1,5 @@
+component:
+  name: aws_iam_lambda_user_pool_policy
+  dependsOn:
+    - aws_cognito_user_pool
+    - aws_iam_lambda_user_pool

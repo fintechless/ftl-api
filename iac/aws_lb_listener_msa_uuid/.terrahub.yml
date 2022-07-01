@@ -1,0 +1,5 @@
+component:
+  name: aws_lb_listener_msa_uuid
+  dependsOn:
+    - aws_lb_target_group_msa_uuid
+    - aws_lb_msa

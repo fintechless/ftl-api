@@ -1,0 +1,5 @@
+component:
+  name: aws_rds
+  dependsOn:
+    - aws_sg_eks
+    - aws_rds_subnet_group

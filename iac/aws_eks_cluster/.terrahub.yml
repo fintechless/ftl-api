@@ -1,0 +1,5 @@
+component:
+  name: aws_eks_cluster
+  dependsOn:
+    - aws_iam_eks
+    - aws_sg_eks

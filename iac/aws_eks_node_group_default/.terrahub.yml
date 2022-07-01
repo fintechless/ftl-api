@@ -1,0 +1,5 @@
+component:
+  name: aws_eks_node_group_default
+  dependsOn:
+    - aws_eks_cluster
+    - aws_iam_eks_node_group_default

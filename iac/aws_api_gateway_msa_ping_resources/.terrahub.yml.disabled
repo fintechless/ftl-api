@@ -1,0 +1,6 @@
+component:
+  name: aws_api_gateway_msa_ping_resources
+  dependsOn:
+    - aws_api_gateway_rest_api
+    - aws_api_gateway_authorizer
+    - aws_api_gateway_vpc_link_msa

@@ -1,0 +1,123 @@
+msa:
+  ping:
+    name: ftl_api.msa.ping.run
+    dpl_name: msa-msg-ping-dpl
+    svc_name:  msa-msg-ping-svc
+    igr_name: msa-msg-ping-igr
+    health_check_path: /msa/ping/_healthy
+  uuid:
+    name: ftl_api.msa.uuid.run
+    dpl_name: msa-msg-uuid-dpl
+    svc_name:  msa-msg-uuid-svc
+    igr_name: msa-msg-uuid-igr
+    health_check_path: /msa/uuid/_healthy
+  latest:
+    name: ftl_api.msa.latest.run
+    dpl_name: msa-msg-latest-dpl
+    svc_name:  msa-msg-latest-svc
+    igr_name: msa-msg-latest-igr
+    health_check_path: /msa/latest/_healthy
+  status:
+    name: ftl_api.msa.status.run
+    dpl_name: msa-msg-status-dpl
+    svc_name:  msa-msg-status-svc
+    igr_name: msa-msg-status-igr
+    health_check_path: /msa/status/_healthy
+  mapping:
+    name: ftl_api.msa.mapping.run
+    dpl_name: msa-msg-mapping-dpl
+    svc_name:  msa-msg-mapping-svc
+    igr_name: msa-msg-mapping-igr
+    health_check_path: /msa/mapping/_healthy
+    
+mgr:
+  member:
+    name: ftl_api.mgr.member.run
+    dpl_name: mgr-member-dpl
+    svc_name:  mgr-member-svc
+    igr_name: mgr-member-igr
+    health_check_path: /mgr/member/_healthy
+  account:
+    name: ftl_api.mgr.account.run
+    dpl_name: mgr-account-dpl
+    svc_name:  mgr-account-svc
+    igr_name: mgr-account-igr
+    health_check_path: /mgr/account/_healthy
+  microservice:
+    name: ftl_api.mgr.microservice.run
+    dpl_name: mgr-microservice-dpl
+    svc_name:  mgr-microservice-svc
+    igr_name: mgr-microservice-igr
+    health_check_path: /mgr/microservice/_healthy
+  transaction:
+    name: ftl_api.mgr.transaction.run
+    dpl_name: mgr-transaction-dpl
+    svc_name:  mgr-transaction-svc
+    igr_name: mgr-transaction-igr
+    health_check_path: /mgr/transaction/_healthy
+  transaction-type:
+    name: ftl_api.mgr.transaction_type.run
+    dpl_name: mgr-transaction-type-dpl
+    svc_name:  mgr-transaction-type-svc
+    igr_name: mgr-transaction-type-igr
+    health_check_path: /mgr/transaction/type/_healthy
+  message:
+    name: ftl_api.mgr.message.run
+    dpl_name: mgr-message-dpl
+    svc_name:  mgr-message-svc
+    igr_name: mgr-message-igr
+    health_check_path: /mgr/message/_healthy
+  message-category:
+    name: ftl_api.mgr.message_category.run
+    dpl_name: mgr-message-category-dpl
+    svc_name:  mgr-message-category-svc
+    igr_name: mgr-message-category-igr
+    health_check_path: /mgr/message/category/_healthy
+  message-definition:
+    name: ftl_api.mgr.message_definition.run
+    dpl_name: mgr-message-definition-dpl
+    svc_name:  mgr-message-definition-svc
+    igr_name: mgr-message-definition-igr
+    health_check_path: /mgr/message/definition/_healthy
+  message-target:
+    name: ftl_api.mgr.message_target.run
+    dpl_name: mgr-message-target-dpl
+    svc_name:  mgr-message-target-svc
+    igr_name: mgr-message-target-igr
+    health_check_path: /mgr/message/target/_healthy
+  message-parser:
+    name: ftl_api.mgr.message_parser.run
+    dpl_name: mgr-message-parser-dpl
+    svc_name:  mgr-message-parser-svc
+    igr_name: mgr-message-parser-igr
+    health_check_path: /mgr/message/parser/_healthy
+  dashboard:
+    name: ftl_api.mgr.dashboard.run
+    dpl_name: mgr-dashboard-dpl
+    svc_name:  mgr-dashboard-svc
+    igr_name: mgr-dashboard-igr
+    health_check_path: /mgr/dashboard/_healthy
+  provider:
+    name: ftl_api.mgr.provider.run
+    dpl_name: mgr-provider-dpl
+    svc_name:  mgr-provider-svc
+    igr_name: mgr-provider-igr
+    health_check_path: /mgr/provider/_healthy
+  provider-category:
+    name: ftl_api.mgr.provider_category.run
+    dpl_name: mgr-provider-category-dpl
+    svc_name:  mgr-provider-category-svc
+    igr_name: mgr-provider-category-igr
+    health_check_path: /mgr/provider/category/_healthy
+  provider-subcategory:
+    name: ftl_api.mgr.provider_subcategory.run
+    dpl_name: mgr-provider-subcategory-dpl
+    svc_name:  mgr-provider-subcategory-svc
+    igr_name: mgr-provider-subcategory-igr
+    health_check_path: /mgr/provider/subcategory/_healthy
+  config:
+    name: ftl_api.mgr.config.run
+    dpl_name: mgr-config-dpl
+    svc_name:  mgr-config-svc
+    igr_name: mgr-config-igr
+    health_check_path: /mgr/config/_healthy
