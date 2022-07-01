@@ -1,0 +1,5 @@
+component:
+  name: aws_api_gateway_domain_name
+  dependsOn:
+    - aws_api_gateway_rest_api
+    - aws_api_gateway_deployment

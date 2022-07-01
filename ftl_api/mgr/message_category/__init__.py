@@ -1,0 +1,3 @@
+"""
+MessageCategory MESSAGE_CATEGORY
+"""

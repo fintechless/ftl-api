@@ -1,0 +1,10 @@
+component:
+  name: aws_k8s_namespace
+  dependsOn:
+    - aws_eks_cluster
+    - aws_eks_node_group_api
+    - aws_eks_node_group_default
+    # - aws_eks_node_group_kafka
+    - aws_iam_eks_node_group_api
+    - aws_iam_eks_node_group_default
+    # - aws_iam_eks_node_group_kafka

@@ -1,0 +1,5 @@
+component:
+  name: aws_lb_listener_msa_mapping
+  dependsOn:
+    - aws_lb_target_group_msa_mapping
+    - aws_lb_msa

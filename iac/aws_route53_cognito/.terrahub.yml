@@ -1,0 +1,4 @@
+component:
+  name: aws_route53_cognito
+  dependsOn:
+    - aws_cognito_user_pool_domain

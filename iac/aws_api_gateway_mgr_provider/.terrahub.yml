@@ -1,0 +1,8 @@
+component:
+  name: aws_api_gateway_mgr_provider
+  dependsOn:
+    - aws_api_gateway_rest_api
+    - aws_api_gateway_authorizer
+    - aws_api_gateway_vpc_link_mgr
+    - aws_lb_mgr
+    - aws_lb_target_group_mgr_provider

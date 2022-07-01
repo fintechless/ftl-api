@@ -1,0 +1,5 @@
+component:
+  name: aws_lb_listener_mgr_transaction_type
+  dependsOn:
+    - aws_lb_target_group_mgr_transaction_type
+    - aws_lb_mgr

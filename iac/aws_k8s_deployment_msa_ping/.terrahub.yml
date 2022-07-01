@@ -1,0 +1,6 @@
+component:
+  name: aws_k8s_deployment_msa_ping
+  dependsOn:
+    - aws_ecr_repository
+    - aws_eks_node_group_api
+    - aws_k8s_kafka

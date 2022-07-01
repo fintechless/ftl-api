@@ -1,0 +1,5 @@
+component:
+  name: aws_k8s_elb_controller
+  dependsOn:
+    - aws_k8s_cert_manager
+    - aws_iam_eks_elb

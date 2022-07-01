@@ -1,0 +1,8 @@
+component:
+  name: aws_api_gateway_msa_mapping
+  dependsOn:
+    - aws_api_gateway_rest_api
+    - aws_api_gateway_authorizer
+    - aws_api_gateway_vpc_link_msa
+    - aws_lb_msa
+    - aws_lb_target_group_msa_mapping

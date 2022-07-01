@@ -1,0 +1,4 @@
+component:
+  name: aws_lb_target_group_msa_latest
+  dependsOn:
+    - aws_k8s_ingress_msa_latest

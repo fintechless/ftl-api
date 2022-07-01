@@ -1,0 +1,5 @@
+component:
+  name: aws_lb_listener_msa_ping
+  dependsOn:
+    - aws_lb_target_group_msa_ping
+    - aws_lb_msa

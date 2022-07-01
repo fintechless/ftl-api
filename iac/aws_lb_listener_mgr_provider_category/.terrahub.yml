@@ -1,0 +1,5 @@
+component:
+  name: aws_lb_listener_mgr_provider_category
+  dependsOn:
+    - aws_lb_target_group_mgr_provider_category
+    - aws_lb_mgr

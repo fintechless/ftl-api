@@ -1,0 +1,4 @@
+component:
+  name: aws_api_gateway_vpc_link_mgr
+  dependsOn:
+    - aws_lb_mgr

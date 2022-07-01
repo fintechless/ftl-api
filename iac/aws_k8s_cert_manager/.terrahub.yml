@@ -1,0 +1,4 @@
+component:
+  name: aws_k8s_cert_manager
+  dependsOn:
+    - aws_eks_node_group_default
