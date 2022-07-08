@@ -24,4 +24,8 @@ resource "aws_lb_target_group_attachment" "this" {
   target_group_arn = aws_lb_target_group.this.arn
   target_id        = data.aws_lb.this.arn
   port             = data.terraform_remote_state.aws_k8s_ingress_mgr_dashboard.outputs.lb_port
+
+  depends_on = [
+    aws_lb_target_group.this
+  ]
 }

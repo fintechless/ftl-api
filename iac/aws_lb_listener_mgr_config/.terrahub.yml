@@ -2,4 +2,4 @@ component:
   name: aws_lb_listener_mgr_config
   dependsOn:
     - aws_lb_target_group_mgr_config
-    - aws_lb_mgr
+    - aws_lb_mgr_cfg

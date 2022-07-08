@@ -4,4 +4,4 @@ component:
     - aws_eks_cluster
     - aws_k8s_service_mgr_message_category
     - aws_k8s_elb_controller
-    - aws_api_gateway_vpc_link_mgr
+    - aws_api_gateway_vpc_link_mgr_ops
