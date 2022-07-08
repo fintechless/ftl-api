@@ -4,7 +4,6 @@ variable "src" {
     config_key    = string
     function_name = string
     description   = string
-    bucket_name   = string
     handler       = string
     runtime       = string
     s3_path       = string
