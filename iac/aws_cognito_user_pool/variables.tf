@@ -30,8 +30,8 @@ variable "src" {
       sms_message                  = string
     })
 
-    # email_configuration = object({
-    #   name = string
-    # })
+    email_configuration = object({
+      name = string
+    })
   })
 }
