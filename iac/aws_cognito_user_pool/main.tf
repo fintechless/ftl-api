@@ -27,9 +27,9 @@ resource "aws_cognito_user_pool" "this" {
     }
   }
 
-  email_configuration {
-    source_arn = local.email_configuration_source
-  }
+  # email_configuration {
+  #   source_arn = local.email_configuration_source
+  # }
 
   lambda_config {
     pre_token_generation = data.terraform_remote_state.aws_lambda_user_pool.outputs.arn

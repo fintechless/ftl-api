@@ -42,7 +42,7 @@ src = {
     sms_message                  = "You have been invited to join Fintechless Platform. Your username is {username} and temporary password is {####}."
   }
 
-  email_configuration = {
-    name = "hello@fintechless.com"
-  }
+  # email_configuration = {
+  #   name = "hello@fintechless.com"
+  # }
 }
