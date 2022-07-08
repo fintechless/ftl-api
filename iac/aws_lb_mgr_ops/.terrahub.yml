@@ -1,0 +1,4 @@
+component:
+  name: aws_lb_mgr_ops
+  dependsOn:
+    - aws_eks_cluster

@@ -43,6 +43,6 @@ src = {
   }
 
   email_configuration = {
-    name = "hello@fintechless.com"
+    name = null
   }
 }
