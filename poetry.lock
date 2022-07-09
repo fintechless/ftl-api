@@ -253,7 +253,7 @@ Six = "*"
 
 [[package]]
 name = "ftl-python-lib"
-version = "0.0.12"
+version = "0.0.15"
 description = "Fintechless Python Library (Fintechless is the Serverless Platform for Financial Institutions and Fintechs)"
 category = "main"
 optional = false
