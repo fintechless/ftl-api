@@ -3,7 +3,7 @@ data "aws_caller_identity" "this" {}
 # data "aws_organizations_organization" "this" {}
 
 data "aws_secretsmanager_secret" "this" {
-  name = var.FTL_CICD_SECRET
+  name = var.FTL_SECRET_CICD
 }
 
 data "aws_secretsmanager_secret_version" "this" {
@@ -76,7 +76,7 @@ provider "kubectl" {
 
 locals {
   ftl_env              = terraform.workspace
-  ftl_cicd_secret_name = var.FTL_CICD_SECRET
+  ftl_cicd_secret_name = var.FTL_SECRET_CICD
   ftl_cicd_secret_map  = jsondecode(data.aws_secretsmanager_secret_version.this.secret_string)
 
   ftl_bucket  = local.ftl_cicd_secret_map["FTL_TFSTATE_BUCKET"]
@@ -154,9 +154,9 @@ locals {
   ]
 }
 
-variable "FTL_CICD_SECRET" {
+variable "FTL_SECRET_CICD" {
   type    = string
-  default = "ftl-cicd-secret"
+  default = "FTL_SECRET_CICD_DEFAULT"
 }
 
 variable "FTL_ALLOWED_AWS_ACCOUNTS" {
