@@ -95,10 +95,10 @@ locals {
     "${local.ftl_passive}" = local.ftl_cicd_secret_map["FTL_PASSIVE_VPC"]
   })
 
-  ftl_subnets = tomap({
+  ftl_subnets = nonsensitive(tomap({
     "${local.ftl_active}"  = nonsensitive(local.ftl_cicd_secret_map["FTL_ACTIVE_SUBNETS"])
     "${local.ftl_passive}" = nonsensitive(local.ftl_cicd_secret_map["FTL_PASSIVE_SUBNETS"])
-  })
+  }))
 
   ftl_domain         = local.ftl_cicd_secret_map["FTL_DOMAIN"]
   ftl_subdomain_api  = local.ftl_cicd_secret_map["FTL_SUBDOMAIN_API"]
