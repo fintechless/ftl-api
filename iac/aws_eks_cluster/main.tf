@@ -3,7 +3,7 @@ resource "aws_eks_cluster" "this" {
   role_arn = data.terraform_remote_state.aws_iam_eks.outputs.arn
 
   vpc_config {
-    subnet_ids         = data.aws_subnets.this.ids
+    subnet_ids         = [for s in data.aws_subnet.this : s.id]
     security_group_ids = [data.terraform_remote_state.aws_sg_eks.outputs.id]
   }
 
