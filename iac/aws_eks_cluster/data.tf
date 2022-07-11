@@ -1,5 +1,5 @@
 data "aws_subnet" "this" {
-  for_each = toset(split(",", local.ftl_active_subnets))
+  for_each = toset(split(",", local.ftl_subnets[data.aws_region.this.name]))
   id       = each.value
 }
 
