@@ -8,7 +8,7 @@ resource "aws_lambda_function" "this" {
   # s3_bucket        = local.ftl_bucket
   # s3_key           = format("%s/%s", var.src.s3_path, var.src.s3_file)
   # source_code_hash = filebase64sha256(var.src.s3_file)
-  role             = data.terraform_remote_state.aws_iam_lambda_user_pool.outputs.arn
+  role = data.terraform_remote_state.aws_iam_lambda_user_pool.outputs.arn
 
   tags = {
     Name = "${var.src.function_name}-${local.ftl_env}"
