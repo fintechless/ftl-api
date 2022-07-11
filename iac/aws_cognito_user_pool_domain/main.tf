@@ -1,5 +1,5 @@
 resource "aws_cognito_user_pool_domain" "this" {
-  domain          = format("%s-%s", local.ftl_env == "default" ? local.ftl_subdomain_auth : "${local.ftl_subdomain_auth}-${local.ftl_env}", local.ftl_domain == "" ? "fintechless" : local.ftl_domain)
+  domain          = local.ftl_domain == "" ? local.default_domain : local.custom_domain
   certificate_arn = local.ftl_domain == "" ? null : data.aws_acm_certificate.this[0].arn
   user_pool_id    = data.terraform_remote_state.aws_cognito_user_pool.outputs.id
 }
