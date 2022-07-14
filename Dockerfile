@@ -14,14 +14,14 @@ RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install software-properties-common git libsasl2-dev libzstd-dev
 # Install librdkafka
-ENV LIBRDKAFKA_VERSION=1.8.2
-RUN git clone -b v${LIBRDKAFKA_VERSION} --single-branch https://github.com/edenhill/librdkafka.git \
-    && cd librdkafka \
-    && ./configure --install-deps \
-    && make \
-    && make install \
-    && cd .. \
-    && rm -rf librdkafka
+# ENV LIBRDKAFKA_VERSION=1.8.2
+# RUN git clone -b v${LIBRDKAFKA_VERSION} --single-branch https://github.com/edenhill/librdkafka.git \
+#     && cd librdkafka \
+#     && ./configure --install-deps \
+#     && make \
+#     && make install \
+#     && cd .. \
+#     && rm -rf librdkafka
 # Install Poetry
 ENV POETRY_VERSION=1.1.13 \
     POETRY_HOME=/opt/poetry
@@ -33,7 +33,7 @@ RUN python -m venv ${VIRTUAL_ENV}
 ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
 
 # Clone FTL PYTHON LIB from GitHub
-ENV FTL_PYTHON_LIB_VERSION=0.0.16
+ENV FTL_PYTHON_LIB_VERSION=0.0.17
 RUN git clone -b v${FTL_PYTHON_LIB_VERSION} --single-branch https://github.com/fintechless/ftl-python-lib.git
 # COPY ftl-python-lib ${PYTHONPATH}/ftl-python-lib
 
