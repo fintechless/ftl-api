@@ -129,11 +129,11 @@ locals {
       value = data.aws_caller_identity.this.account_id
     },
     {
-      name  = "FTL_CLOUD_REGION_PRIMARY"
+      name  = "FTL_ACTIVE_REGION"
       value = local.ftl_active
     },
     {
-      name  = "FTL_CLOUD_REGION_SECONDARY"
+      name  = "FTL_PASSIVE_REGION"
       value = local.ftl_passive
     },
     {
