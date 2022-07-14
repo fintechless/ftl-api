@@ -30,7 +30,7 @@ def mock_base_environ() -> str:
         "KAFKA_MESSAGE_INBOX_TARGET": "topic-msg-in-pacs-008",
         "KAFKA_MESSAGE_OUTBOX_TARGET": "topic-msg-out-pacs-008",
         "FTL_ENVIRONMENT": "default",
-        "FTL_CLOUD_REGION_PRIMARY": "us-east-1",
+        "FTL_ACTIVE_REGION": "us-east-1",
         "FTL_CLOUD_PROVIDER_API_ENDPOINT_URL": "http://localhost:4566",
         "FTL_MSA_UUID_TTL": "5",
         "FTL_RUNTIME_BUCKET": "ftl-api-runtime-default-us-east-1-123456789012",
