@@ -14,20 +14,8 @@ src = {
   uri_path             = "build"
   http_methods = [
     {
-      http_method             = "GET"
-      integration_http_method = "GET"
-    },
-    {
       http_method             = "PATCH"
       integration_http_method = "PATCH"
-    },
-    {
-      http_method             = "POST"
-      integration_http_method = "POST"
-    },
-    {
-      http_method             = "DELETE"
-      integration_http_method = "DELETE"
-    },
+    }
   ]
 }
