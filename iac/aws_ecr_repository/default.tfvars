@@ -19,6 +19,7 @@ src = [
   "ftl/mgr/provider-category",
   "ftl/mgr/provider-subcategory",
   "ftl/mgr/config",
+  "ftl/mgr/build",
 ]
 
 tags = {

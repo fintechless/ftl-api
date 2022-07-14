@@ -121,3 +121,9 @@ mgr:
     svc_name:  mgr-config-svc
     igr_name: mgr-config-igr
     health_check_path: /mgr/config/_healthy
+  build:
+    name: ftl_api.mgr.build.run
+    dpl_name: mgr-build-dpl
+    svc_name:  mgr-build-svc
+    igr_name: mgr-build-igr
+    health_check_path: /mgr/build/_healthy

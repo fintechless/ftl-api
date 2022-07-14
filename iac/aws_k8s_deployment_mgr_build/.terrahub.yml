@@ -1,0 +1,7 @@
+component:
+  name: aws_k8s_deployment_mgr_build
+  dependsOn:
+    - aws_ecr_repository
+    - aws_k8s_namespace
+    - aws_eks_node_group_api
+    - aws_k8s_deployment_mgr_member

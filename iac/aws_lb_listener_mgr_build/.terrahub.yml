@@ -1,0 +1,5 @@
+component:
+  name: aws_lb_listener_mgr_build
+  dependsOn:
+    - aws_lb_target_group_mgr_build
+    - aws_lb_mgr_ops

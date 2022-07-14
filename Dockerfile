@@ -33,7 +33,7 @@ RUN python -m venv ${VIRTUAL_ENV}
 ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
 
 # Clone FTL PYTHON LIB from GitHub
-ENV FTL_PYTHON_LIB_VERSION=0.0.17
+ENV FTL_PYTHON_LIB_VERSION=0.0.18
 RUN git clone -b v${FTL_PYTHON_LIB_VERSION} --single-branch https://github.com/fintechless/ftl-python-lib.git
 # COPY ftl-python-lib ${PYTHONPATH}/ftl-python-lib
 

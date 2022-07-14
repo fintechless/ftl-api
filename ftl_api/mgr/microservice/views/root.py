@@ -3,6 +3,7 @@ Flask view for the MICROSERVICE blueprint
 Path: /
 """
 
+import base64
 import json
 from types import NoneType
 from typing import Union
@@ -196,9 +197,15 @@ def patch() -> Response:
 
             _check_input_attributes(body_json, microservice_update)
 
+            microservice_bytes = base64.b64decode(body_json["microservice"]["content"]
+                                                  ) if "content" in body_json["microservice"] else None
+            file_path = body_json["microservice"]["file_path"] if "file_path" in body_json["microservice"] else None
+
             response = microservice_helper.update(
                 microservice_update=microservice_update,
                 owner_member_id=body_json["owner_member_id"],
+                content=microservice_bytes,
+                file_path=file_path,
             )
 
             return make_response(
