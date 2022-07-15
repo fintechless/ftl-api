@@ -22,15 +22,25 @@ from ftl_python_lib.utils.to_str import bytes_to_str
 
 from ftl_api.mgr.build.blueprints import BLUEPRINT_BUILD
 
+
 def threaded(**kwargs) -> None:
     request_context: RequestContext = kwargs.get("request_context")
     environ_context: EnvironmentContext = kwargs.get("environ_context")
     id: str = kwargs.get("id")
-    
+    _build: bool = kwargs.get("build")
     build_helper = HelperCodeBuild(
         request_context=request_context, environ_context=environ_context, id=id
     )
-    build_helper.build_active()
+
+    if _build:
+        build_helper.deploy_repo_active()
+        build_helper.deploy_repo_passive()
+        build_helper.build_active()
+        build_helper.build_passive()
+    else:
+        build_helper.deploy_all_active()
+        build_helper.deploy_all_passive()
+
 
 @BLUEPRINT_BUILD.route("", methods=["PATCH"])
 def patch() -> Response:
@@ -63,12 +73,18 @@ def patch() -> Response:
                     message="Missing build_id URL query. Please provide a valid build_id value",
                 )
 
+            _build = True
+
+            if "deploy" in body_json["build"]:
+                _build = False
+
             threading.Thread(
                 target=threaded,
                 kwargs={
                     "request_context": request_context,
                     "environ_context": environ_context,
-                    "id": body_json["build"]["id"]
+                    "id": body_json["build"]["id"],
+                    "build": _build
                 },
             ).start()
 
