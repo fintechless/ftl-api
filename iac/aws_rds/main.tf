@@ -13,7 +13,7 @@ resource "aws_rds_cluster" "this" {
   enabled_cloudwatch_logs_exports     = var.src.enabled_cloudwatch_logs_exports
   iam_database_authentication_enabled = var.src.iam_database_authentication_enabled
   iam_roles                           = var.src.iam_roles
-  iops                                = var.src.iops
+  # iops                                = var.src.iops
   availability_zones                  = data.terraform_remote_state.aws_rds_subnet_group.outputs.availability_zones
   database_name                       = var.src.database_name
   deletion_protection                 = var.src.deletion_protection
